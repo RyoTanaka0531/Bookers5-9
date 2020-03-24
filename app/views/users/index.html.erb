@@ -1,7 +1,7 @@
 <main>
 <div class="container">
   <div class="row">
-  <%= render 'books/list' %>
+  <%= render 'books/list', book: @book %>
     <div class="col-xs-9">
       <h1>Users</h1>
       <table class="table table-striped">
@@ -27,16 +27,7 @@
           <td>名前</td>
           <td>詳細</td>
         </tr>
-        <tr>
-          <td>写真</td>
-          <td>名前</td>
-          <td>詳細</td>
-        </tr>
-        <tr>
-          <td>写真</td>
-          <td>名前</td>
-          <td>詳細n</td>
-        </tr>
+
       </tbody>
       </table>
     </div>

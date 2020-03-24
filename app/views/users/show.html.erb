@@ -1,42 +1,25 @@
 <main>
 <div class="container">
   <div class="row">
-  <%= render 'books/list' %>
+   <%= render 'books/list', book: @book, user: @user %>
     <div class="col-xs-9">
       <h1>Books</h1>
       <table class="table table-striped">
       <thead>
         <tr>
+          <th>image</th>
           <th>Title</th>
           <th>Opinion</th>
         </tr>
       </thead>
       <tbody>
+        <% @books.each do |book| %>
         <tr>
           <td>写真</td>
-          <td>タイトル</td>
-          <td>opinion</td>
+          <td><%= book.title %></td>
+          <td><%= book.body%></td>
         </tr>
-        <tr>
-          <td>写真</td>
-          <td>タイトル</td>
-          <td>opinion</td>
-        </tr>
-        <tr>
-          <td>写真</td>
-          <td>タイトル</td>
-          <td>opinion</td>
-        </tr>
-        <tr>
-          <td>写真</td>
-          <td>タイトル</td>
-          <td>opinion</td>
-        </tr>
-        <tr>
-          <td>写真</td>
-          <td>タイトル</td>
-          <td>opinion</td>
-        </tr>
+        <% end %>
       </tbody>
       </table>
     </div>

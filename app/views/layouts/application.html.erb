@@ -18,7 +18,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li class="nav-item">
-            <%= link_to "Home", users_path, class: "nav-link active" %>
+            <%= link_to "Home", user_path(current_user.id), class: "nav-link active" %>
           </li>
           <li class="nav-item">
             <%= link_to "Users", users_path, class: "nav-link active" %>
@@ -27,7 +27,7 @@
             <%= link_to "Books", books_path, class: "nav-link active" %>
           </li>
           <li class="nav-item">
-            <%= link_to "logout", new_user_session_path, class: "nav-link active" %>
+            <%= link_to "logout", destroy_user_session_path, method: :delete, class: "nav-link active" %>
           </li>
         <% else %>
           <li class="nav-item">
