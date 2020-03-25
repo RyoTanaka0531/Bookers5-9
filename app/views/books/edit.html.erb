@@ -1,0 +1,28 @@
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1>Editing Book</h1>
+        <%= form_for(@book) do |f| %>
+         <div class="edit">
+            <div class="form">
+              <div class="edit-text">
+                <strong>Titel</strong>
+              </div>
+              <p><%= f.text_field :title, autofocus: true, class: 'col-xs-12'%></p>
+            </div>
+            <div class="form">
+              <div class="edit-text">
+                <strong>Opinion</strong>
+              </div>
+              <p><%= f.text_area :body, autosfocus: true, class: 'col-xs-12'%></p>
+            </div>
+            <div class="form">
+              <%= f.submit "Update Book", class: 'btn btn-primary col-xs-12' %>
+            </div>
+         </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>
