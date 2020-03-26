@@ -1,6 +1,16 @@
 <main>
 <div class="container">
   <div class="row">
+  <% if @book.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <h3><%= pluralize(@book.errors.count, "error") %> prohibited this obj being saved: </h3>
+      <ul>
+        <% @book.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <%# ここより下、部分テンプレートとして使う %>
        <%= render 'books/list', book: @book, user: @user %>
   <%# こここまで部分テンプレート %>
