@@ -1,13 +1,16 @@
 <main>
 <div class="container">
   <div class="row">
+  <p id="notice">
+    <%= notice %>
+  </p>
    <%= render 'books/list', book: @book, user: @user %>
     <div class="col-xs-9">
-      <h1>Books</h1>
+      <h2>Books</h2>
       <table class="table table-striped">
       <thead>
         <tr>
-          <th>image</th>
+          <th></th>
           <th>Title</th>
           <th>Opinion</th>
         </tr>
@@ -29,4 +32,5 @@
     </div>
   </div>
 </div>
+<%= render 'users/links' %>
 </main>

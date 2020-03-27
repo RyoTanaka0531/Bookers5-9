@@ -1,13 +1,13 @@
 <main>
 <div class="container">
   <div class="row">
-  <p id="norice">
-    <%= notice%>
+  <p id="notice">
+    <%= notice %>
   </p>
   <%= render 'books/list', book: @book_new, user: @user %>
     <div class="col-xs-9">
       <h1>Book detail</h1>
-      <table class="table table-striped">
+      <table class="table table-hover table-inverse">
         <tbody>
           <tr>
             <td>
@@ -20,11 +20,11 @@
             <td><%= @book.body %></td>
             <td>
               <% if @book.user.id == current_user.id %>
-                <%= link_to "Edit",edit_book_path %></td>
+                <%= link_to "Edit",edit_book_path, class: "btn-sm btn-success" %>
               <% end %>
             <td>
               <% if @book.user.id == current_user.id %>
-               <%= link_to "Destroy", book_path(@book), method: :delete, "data-confirm" => "本当に消しますか？" %>
+               <%= link_to "Destroy", book_path(@book), class: "btn-sm btn-danger", method: :delete, "data-confirm" => "本当に消しますか？" %>
               <% end %>
             </td>
           </tr>
@@ -33,4 +33,5 @@
     </div>
   </div>
 </div>
+<%= render 'users/links'%>
 </main>

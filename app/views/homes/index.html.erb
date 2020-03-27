@@ -1,0 +1,16 @@
+<main>
+  <div class="container">
+  <p id="notice">
+    <%= notice %>
+  <p>
+    <div class="row">
+      <div class="top-message col-md-offset-3 col-md-6">
+    <h1>welcome to <span class="glyphicon glyphicon-book"></span>Bookers</span>  !!</h1>
+    <p>In <spans class="glyphicon glyphicon-book"></span><strong>Bookers</strong>,
+    <p>you can share and exchange your opinions, inpressions, and emotions</p>
+    <p>about various books!</p>
+    <%= link_to "Log in", new_user_session_path, class: "btn btn-info col-xs-10 col-xs-offset-1" %>
+    <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success col-xs-10 col-xs-offset-1"%>
+  </div>
+  <%= render 'users/links' %>
+</main>

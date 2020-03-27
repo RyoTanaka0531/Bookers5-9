@@ -20,7 +20,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+header{
+    color: white;
+}
+header 
+.navbar-left
+span{
+    font-size: 20px;
+    padding-top: 10px;
+}
 main{
     margin-top: 51px;
     width: 100%;
@@ -31,19 +39,45 @@ main{
     margin-right: auto;
 }
 
-h1{
+h1, h2{
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
+
 .col-offset-9{
     margin-left: 75%;
 }
-th{
-    border-top: 1px solid gray;
-}
+
 .edit-text{
     margin-bottom: 5px;
 }
 .form{
     margin-bottom: 10px;
+}
+.field{
+    margin-bottom: 10px;
+}
+.error_explanation{
+    margin: 10px 0 0;
+    color: red;
+}
+.actions{
+    margin-bottom: 10px;
+}
+a:visited{
+    color: #666;
+}
+#notice{
+    color: green;
+}
+th{
+    border-top: 1px solid gray;
+    padding: 8px;
+}
+.left-table{
+    margin-bottom: 20px;
+}
+table{
+    width: 100%;
 }

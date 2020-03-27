@@ -3,21 +3,22 @@
 <div class="container">
 <h2>User info</h2>
   <%= form_for(@user) do |f| %>
-    <div class="edit">
+    <div class="field">
       <label>Name</label>
       <%= f.text_field :name %>
     </div>
-    <div class="edit">
+    <div class="field">
       <label>Image</label>
       <%= f.attachment_field :profile_image %>
     </div>
-    <div class="edit">
+    <div class="field">
       <label>Introduction</label>
       <%= f.text_area :introduction %>
     </div>
-    <div class="edit">
+    <div class="field">
     <p><%= f.submit "Update User" %></p>
     </div>
 <% end %>
 </div>
+<%= render 'users/links'%>
 </main>

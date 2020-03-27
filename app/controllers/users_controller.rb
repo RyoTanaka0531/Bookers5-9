@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    before_action :authenticate_user!
 
     def show
         @user = User.find(params[:id])
@@ -7,7 +8,8 @@ class UsersController < ApplicationController
     end
 
     def create
-        @book = Book.new(book_params)
+        @user = User.new(user_params)
+        @user.save, notice = 'Welcome! You have signed up successfully.'
         @book.save
         redirect_to book_path
     end
