@@ -1,0 +1,2 @@
+class AddtTitleToBook < ApplicationRecord
+end
