@@ -2,6 +2,19 @@
 <main>
 <div class="container">
 <h2>User info</h2>
+  <div class="error">
+    <% if @user.errors.any? %>
+      <div id="error_explanation" style="color: red;">
+          <h3><%= pluralize(@user.errors.count, "error") %> prohibited this obj being saved: </h3>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end%>
+  </div>
+
   <%= form_for(@user) do |f| %>
     <div class="field">
       <label>Name</label>
